@@ -1,20 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-select placeholder="es" slot="start">
+      <ion-select-option value="ES">ES</ion-select-option>
+      <ion-select-option value="EN">EN</ion-select-option>
+    </ion-select>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        {{'HOME'| translate }}
+      </ion-button>
+      <ion-button>
+        {{'SKILLS'| translate }}
+      </ion-button>
+      <ion-button>
+        {{'PROJECTS'| translate }}
+      </ion-button>
+      <ion-button>
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="logo-github"></ion-icon>
+      </ion-button>
+      <ion-button>
+        {{'CONTACT'| translate }}
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  
 </ion-content>
