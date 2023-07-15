@@ -1,27 +1,211 @@
-#container {
-  text-align: center;
+ion-toolbar{
+  --background: #000022;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  ion-select{
+    border: solid 1.2px white;
+    margin: 8px 12px;
+    padding: 0 8px;
+    font-weight: bold;
+  }
+
+  ion-button{
+    color: #ccc;
+  }
+
+  ion-button:hover{
+    color: white;
+  }
+
+  .btn-linkedin{
+    position: relative;
+    --border-color: white;
+    --border-radius: 50%;
+  }
+
+  .btn-linkedin::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #0a58ca;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: .3s ease-in-out;
+    transition: all .75s;
+    z-index: -1;
+  }
+  .btn-linkedin:hover::before{
+    width: 100%;
+  }
+
+  .btn-animation{
+    margin-right: 18px;
+    padding: 12px 24px;
+    border: solid 1.2px white;
+    background: transparent;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+  }
+  .btn-animation::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: white;
+    transition: all 1.25s;
+    z-index: -1;
+  }
+  .btn-animation:hover::before{
+    width: 100%;
+  }
+  .btn-animation:hover{
+    span{
+      animation-name: hover-transition;
+      animation-duration: 1.25s;
+      color: #000022;
+    }
+  }
+  @keyframes hover-transition {
+    0%{
+      color: white;
+    }
+    100% {
+      color: #000022;
+    }
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.card{
+  //display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/images/home.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 500px;
+  font-family: var(--main-font);
+  font-weight: 900;
+  &>.card-container{
+    display: flex;
+    flex-direction: column;  
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    margin: 12px;
+    padding: 8px;
+    &>.card-title{
+      display: flex;
+      font-size: 2.5rem;
+      align-self: center;
+      padding: 8px;
+    }
+    
+    &>.card-text{
+      display: flex;
+      font-size: 1.5rem;
+      align-self: center;
+      padding: 8px;
+    }
+  }
+  &>.card-img{
+    height: 200px;
+    border-radius: 50%;
+  }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+*{
+  font-family: 'League Spartan', sans-serif !important;
 }
 
-#container a {
-  text-decoration: none;
+#home-about{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 5%;
+  &>.about-title{
+    padding: 10px 16px;
+    font-size: 2.25rem;
+    border: solid 1.5px white;
+    color: white;
+    position: relative;
+    display: inline-block;
+    background-image: linear-gradient(to right, #1111ff, #2020a0 ,#000033);
+    background-size: 200% 100%;
+    background-position: 100% 50%;
+    animation: about-title-animation 5s linear infinite;
+  }
+
+  @keyframes about-title-animation {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  &>.about-subtitle{
+    font-size: 1.25rem;
+    color: #ccc;
+    text-align: left;
+    letter-spacing: 1.25px;
+    line-height: 1.5rem;
+  }
+
+  &>.about-btn{
+    --background:transparent;
+    --background-hover: transparent;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    --margin-bottom: 60px;
+  }
+
+  &>.about-btn:hover{
+    --background:transparent;
+    color: #1111ff;
+    &>span{
+      animation-name: about-btn-animation;
+      animation-duration: .5s;
+      margin-right: 30px;
+    }
+    &>ion-icon{
+      color: white;
+    }
+  }
+
+  & > .about-btn:not(:hover) > span {
+    margin-right: 0px;
+    animation-name: about-btn-animation-reverse;
+    animation-duration: 0.5s;
+  }
+
+  @keyframes about-btn-animation {
+    0% {
+      margin-right: 0px;
+    }
+    100% {
+      margin-right: 30px;
+    }
+  }
+
+  @keyframes about-btn-animation-reverse {
+    0% {
+      margin-right: 30px;
+    }
+    100% {
+      margin-right: 0px;
+    }
+  }
 }

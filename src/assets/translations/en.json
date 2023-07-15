@@ -2,5 +2,9 @@
     "HOME":"Home",
     "SKILLS":"Skills",
     "PROJECTS":"Projects",
-    "CONTACT":"Contact"
+    "CONTACT":"Contact",
+    "PROFESSION":"Full Stack Developer",
+    "SELF-TITLE":"Hi, I'm Alexis Patiño Agudelo, full stack developer",
+    "SELF-DESCRIPTION":"In this moment i'm system engineer student, full stack developer (with preference in backend) and have basic knowledge in aws",
+    "DOWNLOAD":"Download"
 }

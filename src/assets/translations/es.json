@@ -2,5 +2,9 @@
     "HOME":"Inicio",
     "SKILLS":"Habilidades",
     "PROJECTS":"Proyectos",
-    "CONTACT":"Contactar"
+    "CONTACT":"Contactar",
+    "PROFESSION":"Desarrollador FullStack",
+    "SELF-TITLE":"Bienvenido a mi portafolio.",
+    "SELF-DESCRIPTION":"En este momento soy estudiante de ingeniería de sistema de la universidad de medellín, desarrollador fullstack (con preferencia en backend) y tengo conocimientos basicos en AWS.",
+    "DOWNLOAD":"Descargar"
 }
